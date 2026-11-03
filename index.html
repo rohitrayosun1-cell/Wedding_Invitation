@@ -356,7 +356,7 @@ html.rm #petals,html.rm #glitter,html.rm #glow{display:none}
     <h1 class="names rv" style="--d:120ms"><span class="sr">Abhishek Verma and Saloni Verma</span><span aria-hidden="true">Abhishek Verma</span><span class="amp" aria-hidden="true">&amp;</span><span aria-hidden="true">Saloni Verma</span></h1>
     <p class="sub rv" style="--d:240ms">Tilak &amp; Wedding Invitation</p>
     <p class="hero-date rv" style="--d:340ms">21 &amp; 25 November 2026</p>
-    <p class="hero-time rv" style="--d:390ms">Barat Time is 5 pm</p>
+    <p class="hero-time rv" style="--d:390ms">Baraat Time is 5 pm</p>
     <a class="btn rv" style="--d:440ms" href="#countdown" id="saveDate">Save the Date</a>
   </div>
   <a class="scroll-hint" href="#couple" aria-label="Scroll down"><svg width="22" height="30" viewBox="0 0 22 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="2" width="16" height="26" rx="8"/><path d="M11 8v5"/></svg></a>
@@ -396,8 +396,8 @@ html.rm #petals,html.rm #glitter,html.rm #glow{display:none}
     </div>
     <p class="cd-note">21 November 2026 · Saturday</p>
   </div>
-  <div class="cdb rv" id="cdBarat">
-    <h3 class="cdt">Countdown to the Barat</h3>
+  <div class="cdb rv" id="cdBaraat">
+    <h3 class="cdt">Countdown to the Baraat</h3>
     <div class="cd" role="timer" aria-live="off">
       <div class="box"><b data-u="d">0</b><span>Days</span></div>
       <div class="box"><b data-u="h">0</b><span>Hours</span></div>
@@ -416,7 +416,7 @@ html.rm #petals,html.rm #glitter,html.rm #glow{display:none}
   <svg class="orn rv" viewBox="0 0 150 18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><use href="#flourish"/></svg>
   <div class="info">
     <div class="card rv"><small>Date</small><strong>25 November 2026</strong><p>Wednesday</p></div>
-    <div class="card rv" style="--d:120ms"><small>Time</small><strong>5:00 PM</strong><p>Barat</p></div>
+    <div class="card rv" style="--d:120ms"><small>Time</small><strong>5:00 PM</strong><p>Baraat</p></div>
     <div class="card rv" style="--d:240ms"><small>Venue</small><strong>Agarasanda Garwar Road Ballia</strong></div>
   </div>
   <div class="actions rv">
@@ -517,7 +517,7 @@ const EVENTS = [
   {name:'Tilak',                 date:'21 Nov 2026', day:'Saturday',  time:'6:30 PM', iso:'2026-11-21T18:30:00+05:30'},
   {name:'Haldi',                 date:'23 Nov 2026', day:'Monday',    time:'7:00 PM', iso:'2026-11-23T19:00:00+05:30'},
   {name:'Mehandi and Sangeet',   date:'24 Nov 2026', day:'Tuesday',   time:'7:00 PM', iso:'2026-11-24T19:00:00+05:30'},
-  {name:'Barat (Wedding Day)',   date:'25 Nov 2026', day:'Wednesday', time:'5:00 PM', iso:'2026-11-25T17:00:00+05:30'}
+  {name:'Baraat (Wedding Day)',   date:'25 Nov 2026', day:'Wednesday', time:'5:00 PM', iso:'2026-11-25T17:00:00+05:30'}
 ];
 /* Album: photo1, photo2 (couple cards) and photo4 (closing picture) are used elsewhere, so they are not repeated here. Add more with a new line; the counter scales automatically. */
 const PHOTOS = [
@@ -607,10 +607,10 @@ lb.addEventListener('touchstart',e=>{ sx=e.changedTouches[0].clientX; sy=e.chang
 lb.addEventListener('touchend',e=>{ const dx=e.changedTouches[0].clientX-sx, dy=e.changedTouches[0].clientY-sy;
   if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)) show(dx<0?cur+1:cur-1); },{passive:true});
 
-/* ---------- 5. COUNTDOWNS (fixed +05:30 IST): Tilak 21 Nov, Barat 25 Nov, 5:00 PM IST ---------- */
+/* ---------- 5. COUNTDOWNS (fixed +05:30 IST): Tilak 21 Nov, Baraat 25 Nov, 5:00 PM IST ---------- */
 const CDS=[
   {el:$('#cdTilak'), iso:'2026-11-21T17:00:00+05:30', label:'Tilak'},
-  {el:$('#cdBarat'), iso:'2026-11-25T17:00:00+05:30', label:'Barat'}
+  {el:$('#cdBaraat'), iso:'2026-11-25T17:00:00+05:30', label:'Baraat'}
 ].map(c=>({...c,t:Date.parse(c.iso),u:{d:$('[data-u=d]',c.el),h:$('[data-u=h]',c.el),m:$('[data-u=m]',c.el),s:$('[data-u=s]',c.el)}}));
 const miniTxt=$('#miniTxt');
 const p2=n=>String(n).padStart(2,'0');
